@@ -1,0 +1,227 @@
+/* ===== BASE STYLES ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3b2424;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.search-login {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    padding: 5px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+}
+
+.login-btn {
+    margin-left: 10px;
+    padding: 5px 15px;
+    font-size: 16px;
+    background-color: #ff0000;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;  
+}
+
+.login-btn:hover {
+    background-color: #18304b;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    margin-top: 80px;
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    position: fixed;
+    height: 100vh;
+    padding-top: 80px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: white;
+    text-decoration: none;
+    color: rgb(255, 0, 0);
+    border: 1px solid #ccc;
+    text-align: left;
+    font-weight: bold;
+}
+
+.sidebar a:hover {
+    background-color: #ddd;
+}
+
+/* Content Area */
+.content {
+    margin-left: 250px;
+    padding: 30px;
+    width: calc(100% - 250px);
+    padding-top: 90px;
+    padding-bottom: 80px;
+    min-height: calc(100vh - 170px);
+}
+
+.section-title {
+    font-size: 28px;
+    color: #3b2424;
+    margin-bottom: 30px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #ff0000;
+}
+
+/* Tech Container - Horizontal Layout */
+.tech-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+/* Tech Boxes - Equal Size */
+.tech-box {
+    background-color: #808080;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    flex: 1 1 300px; /* Grow, shrink, base width */
+    max-width: calc(33.33% - 14px); /* 3 per row */
+    position: relative;
+    padding-bottom: 50px;
+}
+
+.tech-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.tech-header {
+    background-color: #6a6a6a;
+    padding: 15px;
+}
+
+.tech-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #e0ffe0;
+    margin: 0;
+}
+
+.tech-text-box {
+    padding: 15px;
+    background-color: #909090;
+    color: white;
+    min-height: 150px; /* Fixed height for content */
+}
+
+.tech-text {
+    margin-bottom: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.read-more {
+    position: absolute;
+    right: 15px;
+    bottom: 15px;
+    padding: 8px 15px;
+    background-color: #3b2424;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.read-more:hover {
+    background-color: #ff0000;
+}
+
+/* Footer */
+.footer {
+    background-color: #3b2424;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    font-size: 16px;
+    margin-left: 250px;
+    width: calc(100% - 250px);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 100;
+}
+
+/* ===== RESPONSIVE DESIGN ===== */
+@media (max-width: 1024px) {
+    .tech-box {
+        max-width: calc(50% - 10px); /* 2 per row */
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        padding-top: 20px;
+    }
+
+    .content, .footer {
+        margin-left: 0;
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .tech-box {
+        max-width: 100%; /* 1 per row */
+    }
+    
+    .footer {
+        position: static;
+    }
+}

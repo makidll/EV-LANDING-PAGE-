@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Navigation Bar with Sidebar</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">Logo</div>
+        <div class="heading">EV EDUCATION: NEPAL AND UK INSIGHTS</div>
+        
+        <div class="search-login">
+            <input type="text" class="search-box" placeholder="Search...">
+            
+            <!-- Login button in the navbar -->
+            <button class="login-btn" onclick="redirectToHomepage()"><a href="login.html">Login</a></button>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="sidebar">
+            <a href="#">Home</a>
+            <a href="#">About Us</a>
+            <a href="#">Technology</a>
+            <a href="#">Our Research</a>
+            <a href="#">Community and Discussions</a> 
+        </div>
+
+        <div class="content">
+    
+            <div class="button-container">
+                <button class="custom-button"> EV Basics  </button>
+                <button class="custom-button">Emerging<br> Technologies</button>
+                <button class="custom-button">Safety and<br> Security</button>
+                <button class="custom-button">News and<br> Updates</button>
+                <button class="custom-button">Guides and<br> Tips</button>
+                <button class="custom-button"> FAQ </button>
+            </div>
+            
+            
+
+
+    <script>
+        function redirectToHomepage() {
+            // Redirecting to the local index.html file
+            window.location.href = "file:///C:/Users/MAKI/Documents/web%20development%202nd/Login/index.html";
+            // Alternatively, you could use:
+            // window.location.href = "index.html"; for relative URLs if on the same server
+        }
+    </script>
+
+    <script src="script.js"></script>
+    <footer class="footer">
+        <p>Contact us at: <a href="mailto:eveeducationinsights.@gmail.com">eveeducationinsights.@gmail.com</a></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,172 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar Styles */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3b2424;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 20px;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+}
+
+.heading {
+    font-size: 22px;
+    font-weight: bold;
+    text-align: center;
+    flex-grow: 1;
+    margin: 0 20px;
+}
+
+.search-login {
+    display: flex;
+    align-items: center;
+}
+
+.search-box {
+    padding: 8px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    width: 200px;
+}
+
+.login-btn {
+    margin-left: 10px;
+    padding: 8px 15px;
+    font-size: 16px;
+    background-color: #4CAF50; /* Green */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.login-btn a {
+    color: white;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background-color: #45a049;
+}
+
+/* Main Container */
+.container {
+    display: flex;
+    margin-top: 80px; /* Below navbar */
+    min-height: calc(100vh - 120px); /* Account for navbar and footer */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    width: 250px;
+    background-color: #f4f4f4;
+    padding: 20px;
+    padding-top: 30px;
+}
+
+.sidebar a {
+    display: block;
+    padding: 12px 15px;
+    margin: 10px 0;
+    background-color: white;
+    text-decoration: none;
+    color: blue;
+    border: 1px solid #ccc;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #e0e0e0;
+    color: darkblue;
+}
+
+/* Content Area */
+.content {
+    flex: 1;
+    padding: 20px;
+    padding-top: 0;
+}
+
+/* Button Styles */
+.button-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+
+.custom-button, .join-discussion {
+    background-color: #666;
+    color: white;
+    padding: 15px 25px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: left;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s;
+}
+
+.custom-button:hover {
+    background-color: #555;
+    transform: scale(1.02);
+}
+
+.join-discussion {
+    background-color: #4CAF50;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.join-discussion:hover {
+    background-color: #45a049;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #3b2424;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}
+
+.footer p {
+    margin: 5px 0;
+}
+
+.footer a {
+    color: lightblue;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
